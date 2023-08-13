@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /*asterisk wildcard selector to override defualt styles added by the browser*/
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 /*general styles*/
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,9 @@ body{
     font-family: 'lato', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -26,7 +28,7 @@ h1, h2, h3 {
 }
 
 /*header*/
-header{
+header {
     background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
@@ -38,28 +40,28 @@ header{
     align-items: baseline;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: inherit;
 }
 
 
-#menu{
+#menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
 
-#menu > li{
+#menu>li {
     margin-bottom: 1em;
 }
 
-.active{
+.active {
     border-bottom: 1px solid #3a3a3a;
 }
 
 /*navbar styles with dropdown toggle*/
-nav{
+nav {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
@@ -71,34 +73,34 @@ nav{
 }
 
 /*nav toggle*/
-#nav-toggle:checked~nav{
+#nav-toggle:checked~nav {
     display: block;
 }
 
-#nav-toggle{
+#nav-toggle {
     display: none;
 }
 
-.nav-toggle-label{
+.nav-toggle-label {
     font-size: 2rem;
 }
 
 /*main content*/
-main{
+main {
     /*make main element take up any surplus space to push footer down*/
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
 /*hero section*/
-#hero{
+#hero {
     height: 600px;
     width: 100%;
-    background: url("../images/hero-image.webp") no-repeat center center/cover ;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
 }
 
-#cover-text{
+#cover-text {
     background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;
@@ -109,12 +111,13 @@ main{
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3{
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff;
 }
 
 /*footer*/
-#social-networks{
+#social-networks {
     text-align: center;
     padding: 20px 0;
     display: flex;
@@ -122,16 +125,17 @@ main{
     list-style-type: none;
 }
 
-#social-networks i{
+#social-networks i {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
 }
 
 /*media query:tablets and larger (768px and up)*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
+
     /*header*/
-    nav{
+    nav {
         display: block;
         position: relative;
         box-shadow: none;
@@ -139,40 +143,67 @@ main{
         padding-right: 1rem;
     }
 
-    #menu{
+    #menu {
         display: flex;
     }
 
-    #menu > li{
+    #menu>li {
         padding-left: 1rem;
     }
 
-    .nav-toggle-label{
+    .nav-toggle-label {
         display: none;
     }
 
-    #logo{
+    #logo {
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
 
     /*main content*/
-    main{
+    main {
         /*push main content down to accomodate larger header*/
         margin-top: 79px;
     }
 
+    /* Reasons section */
+    #reasons {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #reasons h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 280%;
+    }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+
+    #benefits p {
+        padding: 0 20px;
+    }
+
+    #benefits hr {
+        border-top: 1px solid #3a3a3a;
+        margin: 5px 0;
+    }
+
     /*Hero Image*/
-    #cover-text{
+    #cover-text {
         width: 300px;
         right: 50px;
     }
 }
 
 /*media query:tablets and larger (992px and up)*/
-@media screen and (min-width: 992px){
-    #menu a:hover{
+@media screen and (min-width: 992px) {
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 }
