@@ -210,6 +210,14 @@ main {
     color: #3a3a3a;
 }
 
+/*media query:large or landscape phones (576px and up)*/
+@media screen and (min-width: 576px){
+    #photos{
+        column-count: 2;
+        column-gap: 0;
+    }
+}
+
 /*media query:tablets and larger (768px and up)*/
 @media screen and (min-width: 768px) {
 
@@ -270,6 +278,12 @@ main {
         width: 300px;
         right: 50px;
     }
+
+    /*Gallery page*/
+    #photos{
+        column-count: 3;
+    }
+
 }
 
 /*media query:tablets and larger (992px and up)*/
@@ -277,6 +291,11 @@ main {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
+
+        /*Gallery page*/
+        #photos {
+            column-count: 4;
+        }
 }
 
 /*media query:desktops and larher(1200px and wider)*/
@@ -307,4 +326,5 @@ main {
     #benefits-physical>div {
         align-self: flex-end;
     }
+
 }
